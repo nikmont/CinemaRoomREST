@@ -43,17 +43,14 @@ public class CinemaRoom {
 
     }
 
-    @JsonGetter(value = "total_rows")
     public int getTotalRows() {
         return totalRows;
     }
 
-    @JsonGetter(value = "total_columns")
     public int getTotalColumns() {
         return totalColumns;
     }
 
-    @JsonGetter(value = "available_seats")
     public List<Seat> getSeats() {
         return seats.stream().filter(Seat::isAvaliable).collect(Collectors.toList());
     }
